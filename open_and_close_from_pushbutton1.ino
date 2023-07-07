@@ -14,13 +14,15 @@ void loop()
   
       
   if (digitalRead(pushbutton) == HIGH) 
-  {delay(150);
+  {
     laststate++; 
-    
-    if (laststate%2 == 0)
-       {digitalWrite(led,1);
-       }
-       else{digitalWrite(led,0);} }                                            
+    delay(250);  }
+    if (laststate == 1 )
+       {digitalWrite(led,1);}
+       
+   else if(laststate ==2){digitalWrite(led,0);}
+   if (laststate==2){laststate=0;} 
+                                            
        
   
    
